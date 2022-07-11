@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Simple Image Editor</h2>
+      <div class="wrapper">
+        <div class="editor-panel">
+          <div class="filter">
+            <label for="" class="title">Filters</label>
+            <div class="options">
+              <button>Brightness</button><button>Saturation</button
+              ><button>Inversion</button><button>Grayscale</button>
+            </div>
+            <div class="slider">
+              <div class="filter-info">
+                <p class="name">Brightness</p>
+                <p class="value">100%</p>
+              </div>
+              <input type="range" value="100" min="0" max="200" />
+            </div>
+          </div>
+          <div class="rotate">
+            <label for="" class="title">Rotate and Flip</label>
+            <div class="options">
+              <button>z</button><button>></button><button>|</button
+              ><button>_</button>
+            </div>
+          </div>
+        </div>
+        <div class="preview-image">
+          <img src="favicon.svg" alt="preview-image" />
+        </div>
+      </div>
+      <div class="controls">
+        <button class="reset-filter">Reset Filter</button>
+        <div class="row">
+          <button class="chose-img">Choose Image</button>
+          <button class="save-img">Save Image</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
