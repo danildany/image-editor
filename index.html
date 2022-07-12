@@ -3,19 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <script
+      src="https://kit.fontawesome.com/6bb668e34d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container disable">
       <h2>Simple Image Editor</h2>
       <div class="wrapper">
         <div class="editor-panel">
           <div class="filter">
             <label for="" class="title">Filters</label>
             <div class="options">
-              <button>Brightness</button><button>Saturation</button
-              ><button>Inversion</button><button>Grayscale</button>
+              <button id="brightness" class="active">Brightness</button
+              ><button id="saturation">Saturation</button
+              ><button id="inversion">Inversion</button
+              ><button id="grayscale">Grayscale</button>
             </div>
             <div class="slider">
               <div class="filter-info">
@@ -28,19 +35,26 @@
           <div class="rotate">
             <label for="" class="title">Rotate and Flip</label>
             <div class="options">
-              <button>z</button><button>></button><button>|</button
-              ><button>_</button>
+              <button id="left"><i class="fa-solid fa-rotate-left"></i></button
+              ><button id="right">
+                <i class="fa-solid fa-rotate-right"></i></button
+              ><button id="horizontal">
+                <i class="fa-solid fa-arrows-left-right"></i></button
+              ><button id="vertical">
+                <i class="fa-solid fa-arrows-up-down"></i>
+              </button>
             </div>
           </div>
         </div>
-        <div class="preview-image">
-          <img src="favicon.svg" alt="preview-image" />
+        <div class="preview-img">
+          <img src="image-placeholder.svg" alt="preview-image" />
         </div>
       </div>
       <div class="controls">
         <button class="reset-filter">Reset Filter</button>
         <div class="row">
-          <button class="chose-img">Choose Image</button>
+          <input type="file" accept="image/*" class="file-input" hidden />
+          <button class="choose-img">Choose Image</button>
           <button class="save-img">Save Image</button>
         </div>
       </div>
